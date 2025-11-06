@@ -1,19 +1,9 @@
 import { Leaf, Sparkles, Heart } from "lucide-react";
-import guptaJiCharacter from "@/assets/gupta-ji-character.png";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 px-4 bg-background relative overflow-hidden">
-      {/* Character Mascot */}
-      <div className="absolute left-10 top-20 hidden lg:block animate-float">
-        <img 
-          src={guptaJiCharacter} 
-          alt="Gupta Ji Character" 
-          className="w-64 h-auto drop-shadow-2xl"
-        />
-      </div>
-
-      <div className="max-w-6xl mx-auto relative z-10">
+    <section id="about" className="py-20 px-4 bg-background">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl md:text-6xl font-playfair font-bold mb-6 text-foreground">
             Finally a drink that is
