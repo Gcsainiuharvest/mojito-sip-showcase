@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-fresh relative overflow-hidden">
+    <section id="contact" className="py-20 px-4 bg-gradient-fresh relative overflow-hidden">
       {/* Decorative circles */}
       <div className="absolute top-10 left-20 w-32 h-32 bg-primary-foreground/10 rounded-full blur-2xl" />
       <div className="absolute bottom-20 right-20 w-40 h-40 bg-primary-foreground/10 rounded-full blur-2xl" />
