@@ -88,3 +88,25 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Utilities */
+@layer utilities {
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+
+  @keyframes pop-in {
+    0% { opacity: 0; transform: translateY(12px) scale(0.92); }
+    60% { opacity: 1; transform: translateY(0) scale(1.02); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .animate-pop-in {
+    animation: pop-in 700ms cubic-bezier(.22,1,.36,1) forwards;
+  }
+}

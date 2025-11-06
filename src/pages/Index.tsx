@@ -5,6 +5,9 @@ import ProductsSection from "@/components/ProductsSection";
 import FlavorsSection from "@/components/FlavorsSection";
 import IngredientsSection from "@/components/IngredientsSection";
 import CTASection from "@/components/CTASection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import BrandSlider from "@/components/BrandSlider";
+import UpcomingSection from "@/components/UpcomingSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -12,10 +15,13 @@ const Index = () => {
     <main className="min-h-screen font-poppins">
       <Navigation />
       <HeroSection />
+      <BrandSlider />
       <AboutSection />
       <ProductsSection />
+      <UpcomingSection />
       <FlavorsSection />
       <IngredientsSection />
+      <TestimonialsSection />
       <CTASection />
       <Footer />
     </main>

@@ -1,28 +1,28 @@
 import { Button } from "@/components/ui/button";
-import mojitoZeera from "@/assets/mojito-zeera.png";
-import mojitoNimboo from "@/assets/mojito-nimboo.png";
-import mojitoShikanji from "@/assets/mojito-shikanji.png";
 
 const ProductsSection = () => {
   const products = [
     {
-      name: "Lahori Zeera",
-      image: mojitoZeera,
-      bgColor: "bg-[#7EC850]",
+      name: "Strawberry Mojito",
+      image: "/images/strawberry.png", // place file in public/images
+      accent: "from-rose-400 to-rose-500",
+      ring: "ring-rose-400/30",
       mrp: "240.00",
       price: "228.00",
     },
     {
-      name: "Lahori Nimboo",
-      image: mojitoNimboo,
-      bgColor: "bg-[#4FC3DC]",
+      name: "Watermelon Mojito",
+      image: "/images/watermelon.png",
+      accent: "from-red-400 to-emerald-500",
+      ring: "ring-red-400/30",
       mrp: "240.00",
       price: "228.00",
     },
     {
-      name: "Lahori Shikanji",
-      image: mojitoShikanji,
-      bgColor: "bg-[#C8D830]",
+      name: "Mint Mojito",
+      image: "/images/mint.png",
+      accent: "from-emerald-400 to-emerald-500",
+      ring: "ring-emerald-400/30",
       mrp: "240.00",
       price: "228.00",
     },
@@ -31,6 +31,11 @@ const ProductsSection = () => {
   return (
     <section id="products" className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold">Our Fresh Flavors</h2>
+          <p className="mt-3 text-muted-foreground font-poppins">Naturally vibrant, crafted for a refreshing sip every time.</p>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-12">
           {products.map((product, index) => (
             <div
@@ -46,16 +51,23 @@ const ProductsSection = () => {
 
               {/* Product Card */}
               <div className="relative overflow-hidden rounded-3xl bg-card shadow-soft hover:shadow-glow transition-all duration-500 hover:-translate-y-4">
-                {/* Circular Background */}
+                {/* Decorative gradient aura */}
+                <div className={`pointer-events-none absolute -top-24 -right-24 h-64 w-64 bg-gradient-to-br ${product.accent} rounded-full blur-3xl opacity-40 group-hover:opacity-60 transition-opacity`} />
+
+                {/* Media */}
                 <div className="relative h-96 flex items-center justify-center overflow-hidden">
-                  <div
-                    className={`absolute w-80 h-80 ${product.bgColor} rounded-full transition-transform duration-500 group-hover:scale-110`}
-                  />
+                  <div className={`absolute w-80 h-80 bg-gradient-to-br ${product.accent} rounded-full opacity-20 transition-transform duration-500 group-hover:scale-110`} />
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="relative z-10 w-48 h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="relative z-10 w-56 h-auto object-cover rounded-2xl ring-2 backdrop-blur-sm transition-all duration-700 ease-[cubic-bezier(.2,.8,.2,1)] group-hover:scale-105 group-hover:rotate-1"
+                    style={{ boxShadow: "0 30px 60px -15px rgba(0,0,0,0.35)" }}
                   />
+                  {/* Floating sparkle dots */}
+                  <div className="absolute inset-0">
+                    <span className="absolute top-8 left-10 w-2 h-2 bg-white/60 rounded-full animate-ping" />
+                    <span className="absolute bottom-10 right-12 w-3 h-3 bg-white/40 rounded-full animate-pulse" />
+                  </div>
                 </div>
 
                 {/* Product Info */}

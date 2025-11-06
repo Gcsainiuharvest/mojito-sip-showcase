@@ -41,7 +41,7 @@ const CTASection = () => {
             </div>
             <div className="font-poppins">
               <p className="text-sm opacity-80">Call Us</p>
-              <p className="font-semibold">+92 300 1234567</p>
+              <p className="font-semibold">+91 100 1234567</p>
             </div>
           </div>
 
@@ -61,7 +61,7 @@ const CTASection = () => {
             </div>
             <div className="font-poppins">
               <p className="text-sm opacity-80">Visit Us</p>
-              <p className="font-semibold">Lahore, Pakistan</p>
+              <p className="font-semibold">Noida, India</p>
             </div>
           </div>
         </div>

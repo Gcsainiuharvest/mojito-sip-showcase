@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,11 +42,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection("hero")}>
-            <Leaf className="w-8 h-8 text-primary" />
-            <span className="text-2xl font-playfair font-bold text-foreground">
-              Fresh<span className="text-primary">Mojito</span>
-            </span>
+          <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("hero")}>
+            <img
+              src="/images/logo.png"
+              alt="Mojito Logo"
+              className="h-10 w-auto object-contain drop-shadow-sm"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -55,7 +56,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary font-poppins font-medium transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                className={`${isScrolled ? "text-foreground" : "text-white"} hover:text-primary font-poppins font-medium transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
               >
                 {item.label}
               </button>
@@ -70,7 +71,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className={`md:hidden ${isScrolled ? "text-foreground" : "text-white"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -84,7 +85,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-3 text-foreground hover:text-primary hover:bg-muted font-poppins font-medium transition-colors duration-300"
+                className={`block w-full text-left px-4 py-3 ${isScrolled ? "text-foreground" : "text-white"} hover:text-primary hover:bg-muted font-poppins font-medium transition-colors duration-300`}
               >
                 {item.label}
               </button>
