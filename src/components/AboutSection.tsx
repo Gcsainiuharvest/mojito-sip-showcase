@@ -6,7 +6,7 @@ const AboutSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl md:text-6xl font-playfair font-bold mb-6 text-foreground">
-            Finally a drink that is
+            Not Just a Drink, It’s an Emotion
           </h2>
           <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
             <span className="text-2xl md:text-3xl font-playfair italic text-primary">a mood enhancer</span>

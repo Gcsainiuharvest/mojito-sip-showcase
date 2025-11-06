@@ -39,22 +39,24 @@ const BrandSlider = () => {
           {/* Copy */}
           <div className="md:col-span-6 text-center md:text-left">
             <p className="font-playfair text-2xl md:text-4xl italic text-card-foreground/80 mb-2 animate-fade-in">
-              {s.headlineTop}
+             Not Just a Drink, 
             </p>
             <h2 className="font-playfair text-5xl md:text-7xl font-black leading-none mb-4 animate-fade-in"
                 style={{ animationDelay: "100ms" }}>
-              {s.headlineMain}
+              It’s an Emotion
             </h2>
             <p className="font-poppins text-muted-foreground mb-6 animate-fade-in leading-7"
                style={{ animationDelay: "200ms" }}>
               {s.sub}
             </p>
             <div className="space-y-3 text-muted-foreground/90 font-poppins animate-fade-in" style={{ animationDelay: "250ms" }}>
-              <p>Crafted with real ingredients and balanced sweetness, this mojito brings the familiar desi twist to every sip.</p>
-              <p>Fresh mint and zesty citrus come together for a clean, uplifting taste that never feels heavy.</p>
-              <p>Perfect for sunny afternoons, house parties, or whenever you want to reset and feel refreshed.</p>
-              <p>Serve chilled, pour over ice, or enjoy straight from the bottle—it's effortlessly delightful either way.</p>
-              <p>Made for everyone who believes refreshment should be simple, natural, and full of joy.</p>
+              <p>When life gives Gupta Ji lemons, he makes legendary mojitos!</p>
+              <p>From minty thandak to strawberry fizz, every bottle packs sass and satisfaction.</p>
+              <p>Because at Gupta Ji Ki Mojito — thirst bhi bujhegi, swag bhi milega!</p>
+              
+
+
+
             </div>
           </div>
 
