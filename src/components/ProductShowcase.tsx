@@ -1,22 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import mintBottle from "@/assets/product-mint.png";
 import watermelonBottle from "@/assets/product-watermelon.png";
-import nimbooBottle from "@/assets/mojito-nimboo.png";
+import strawberryBottle from "@/assets/product-strawberry.png";
 
 const ProductShowcase = () => {
   const products = [
     {
-      name: "Nimbu Mojito",
-      tagline: "Taste ka Takkar, Refreshment ka Baap",
+      name: "Strawberry Mojito",
+      tagline: "Berry Sweet, Berry Cool",
       description: [
-        "a thandak tornado, a masala blast",
-        "Cool, fizzy, and made with sass",
-        "This is not just nimbu paani, bhai",
-        "It's Guptaji Ki Shikanji, asli desi swag wali chai!"
+        "Sweet strawberries, fizzy treat",
+        "One sip and you're on your feet",
+        "This ain't regular juice, my friend",
+        "It's Guptaji Ki Mojito, berry good till the end!"
       ],
-      image: nimbooBottle,
-      color: "from-lime-400 to-lime-600",
-      emoji: "🍋"
+      image: strawberryBottle,
+      color: "from-red-400 to-pink-500",
+      emoji: "🍓"
     },
     {
       name: "Watermelon Mojito",
@@ -85,7 +85,7 @@ const ProductSection = ({ product, index }: { product: any; index: number }) => 
   return (
     <section
       ref={sectionRef}
-      className={`relative py-20 px-4 overflow-hidden ${
+      className={`relative py-20 px-4 md:px-8 lg:px-12 overflow-hidden ${
         index % 2 === 0 ? "bg-background" : "bg-muted/30"
       }`}
     >
