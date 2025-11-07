@@ -25,9 +25,7 @@ const Navigation = () => {
   const navItems = [
     { label: "Home", id: "hero" },
     { label: "About", id: "about" },
-    { label: "Products", id: "products" },
-    { label: "Flavors", id: "flavors" },
-    { label: "Ingredients", id: "ingredients" },
+    { label: "News & Events", id: "news-events" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -65,7 +63,7 @@ const Navigation = () => {
               onClick={() => scrollToSection("contact")}
               className="bg-primary hover:bg-primary-glow text-primary-foreground font-poppins font-semibold shadow-glow"
             >
-              Order Now
+              Enquire Now
             </Button>
           </div>
 
@@ -95,7 +93,7 @@ const Navigation = () => {
                 onClick={() => scrollToSection("contact")}
                 className="w-full bg-primary hover:bg-primary-glow text-primary-foreground font-poppins font-semibold"
               >
-                Order Now
+                Enquire Now
               </Button>
             </div>
           </div>

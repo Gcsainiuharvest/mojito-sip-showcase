@@ -28,14 +28,16 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 px-4 bg-muted/30">
+    <section id="testimonials" className="pt-20 px-4 bg-muted/30" style={{paddingBottom:120}}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-playfair font-bold">
-            What People Are Saying
+            Suna Hai? Sab Chill Kar Rahe Hain.
           </h2>
           <p className="mt-3 text-muted-foreground font-poppins">
-            Real sips. Real smiles. Real stories.
+            Why Everyone’s Vibing with Gupta Ji Ki Mojito
+We don’t just serve drinks - we serve the guarantee of chill.
+
           </p>
         </div>
 

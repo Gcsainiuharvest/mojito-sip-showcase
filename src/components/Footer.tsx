@@ -6,9 +6,13 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-playfair font-bold mb-4">Fresh Mojito</h3>
+            <img
+              src="/images/logo.png"
+              alt="Gupta Ji Ki Mojito Logo"
+              className="h-16 w-auto mb-4"
+            />
             <p className="font-poppins text-sm text-white/80">
-              Refreshingly desi, naturally delicious. Made with love and fresh ingredients.
+               Made with fizz, love, and a lot of Gupta Ji attitude.
             </p>
           </div>
 
@@ -16,18 +20,16 @@ const Footer = () => {
             <h4 className="font-poppins font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 font-poppins text-sm">
               <li><a href="#" className="hover:text-lime-300 transition-colors">Home</a></li>
-              <li><a href="#" className="hover:text-lime-300 transition-colors">Flavors</a></li>
-              <li><a href="#" className="hover:text-lime-300 transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-lime-300 transition-colors">Contact</a></li>
+              <li><a href="#about" className="hover:text-lime-300 transition-colors">About</a></li>
+              <li><a href="#contact" className="hover:text-lime-300 transition-colors">Contact</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-poppins font-semibold mb-4">Shop</h4>
             <ul className="space-y-2 font-poppins text-sm">
-              <li><a href="#" className="hover:text-lime-300 transition-colors">All Products</a></li>
-              <li><a href="#" className="hover:text-lime-300 transition-colors">Combo Packs</a></li>
-              <li><a href="#" className="hover:text-lime-300 transition-colors">Gift Sets</a></li>
+              <li><a href="#products" className="hover:text-lime-300 transition-colors">All Products</a></li>
+              <li><a href="#" className="hover:text-lime-300 transition-colors">News & Events</a></li>
               <li><a href="#" className="hover:text-lime-300 transition-colors">Order Now</a></li>
             </ul>
           </div>
@@ -46,14 +48,14 @@ const Footer = () => {
               </a>
             </div>
             <p className="font-poppins text-sm text-white/80">
-              Stay connected for exclusive offers!
+              Follow the chill -  @GuptaJiKiMojito
             </p>
           </div>
         </div>
 
         <div className="border-t border-white/20 pt-8 text-center">
           <p className="font-poppins text-sm text-white/60">
-            © 2025 Fresh Mojito. All rights reserved. Made with 💚 in Pakistan
+            © 2025 Gupta Ji Ki Mojito — All Rights of Chill Reserved.
           </p>
         </div>
       </div>

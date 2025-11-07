@@ -13,7 +13,8 @@ const HeroSection = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/GPJKM_BannerVideo.mp4" type="video/mp4" />
+          <source src="/images/HeaderMobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+          <source src="/images/HeaderDesktop.mp4" type="video/mp4" media="(min-width: 768px)" />
         </video>
         <div className="absolute inset-0 bg-gradient-hero" />
       </div>

@@ -2,27 +2,28 @@ import { Button } from "@/components/ui/button";
 
 const ProductsSection = () => {
   const products = [
-    {
+     {
       name: "Strawberry Mojito",
-      image: "/images/strawberry.png", // place file in public/images
+      image: "/images/strawberry.png",
       accent: "from-rose-400 to-rose-500",
       ring: "ring-rose-400/30",
       mrp: "240.00",
       price: "228.00",
     },
+     {
+      name: "Mint Mojito",
+      image: "/images/mint.png",
+      accent: "from-emerald-400 to-emerald-500",
+      ring: "ring-emerald-400/30",
+      mrp: "240.00",
+      price: "228.00",
+    },
+   
     {
       name: "Watermelon Mojito",
       image: "/images/watermelon.png",
       accent: "from-red-400 to-emerald-500",
       ring: "ring-red-400/30",
-      mrp: "240.00",
-      price: "228.00",
-    },
-    {
-      name: "Mint Mojito",
-      image: "/images/mint.png",
-      accent: "from-emerald-400 to-emerald-500",
-      ring: "ring-emerald-400/30",
       mrp: "240.00",
       price: "228.00",
     },
@@ -32,16 +33,17 @@ const ProductsSection = () => {
     <section id="products" className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold">Our Fresh Flavors</h2>
-          <p className="mt-3 text-muted-foreground font-poppins">Naturally vibrant, crafted for a refreshing sip every time.</p>
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold">Meet Your Mood Bottled</h2>
+          <p className="mt-3 text-muted-foreground font-poppins">Not just drinks, these guys have personalities.
+Mint’s chillin’, Watermelon’s flexin’, Strawberry’s flirtin’. Who you vibin’ with today?
+</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12">
           {products.map((product, index) => (
             <div
               key={index}
-              className="group relative animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="group relative"
             >
               {/* Save Badge */}
               <div className="absolute top-8 left-8 z-20 bg-destructive text-destructive-foreground rounded-full w-16 h-16 flex flex-col items-center justify-center font-poppins font-bold shadow-lg">
@@ -56,7 +58,6 @@ const ProductsSection = () => {
 
                 {/* Media */}
                 <div className="relative h-96 flex items-center justify-center overflow-hidden">
-                  <div className={`absolute w-80 h-80 bg-gradient-to-br ${product.accent} rounded-full opacity-20 transition-transform duration-500 group-hover:scale-110`} />
                   <img
                     src={product.image}
                     alt={product.name}
@@ -73,14 +74,7 @@ const ProductsSection = () => {
                 {/* Product Info */}
                 <div className="p-8 text-center space-y-4">
                   <div className="space-y-2">
-                    <div className="flex items-center justify-center gap-3 font-poppins">
-                      <span className="text-muted-foreground line-through">
-                        MRP {product.mrp}
-                      </span>
-                      <span className="text-primary font-semibold text-lg">
-                        From Rs. {product.price}
-                      </span>
-                    </div>
+                   
                     <h3 className="text-3xl font-playfair italic font-bold text-card-foreground">
                       {product.name}
                     </h3>

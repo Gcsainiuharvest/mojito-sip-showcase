@@ -1,70 +1,69 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
-import bottlesImage from "@/assets/bottles-hands.png";
 
 const CTASection = () => {
   return (
-    <section id="contact" className="relative py-20 px-4 bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute right-0 bottom-0 w-full md:w-2/3 lg:w-1/2 h-2/3 md:h-3/4 lg:h-full flex items-end justify-end pointer-events-none">
-        <img 
-          src={bottlesImage} 
-          alt="Gupta Ji Ki Mojito bottles" 
-          className="h-full w-auto object-contain object-right-bottom opacity-90"
-        />
-      </div>
+    <>
+      <style>
+        {`
+          #contact {
+            background-image: url(/images/footerbanner_mobile.png);
+          }
+          @media (min-width: 768px) {
+            #contact {
+              background-image: url(/images/footerbanner.png);
+            }
+          }
+        `}
+      </style>
+      <section
+        id="contact"
+        className="relative w-full h-[550px] bg-cover bg-center flex items-center"
+      >
+      {/* Overlay gradient for better text visibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="max-w-xl">
-          <h2 className="text-5xl md:text-6xl font-playfair font-bold text-white mb-4">
-            Contact Us
-          </h2>
-          
-          <p className="text-lg text-gray-200 font-poppins mb-8 leading-relaxed">
-            Have feedback, questions, or just wanna say "bhot badiya hai"?<br />
-            We're listening.
-          </p>
+      {/* Text Content */}
+      <div className="relative z-10 pl-6 md:pl-20 text-white max-w-xl space-y-6">
+        <h2 className="text-4xl md:text-6xl font-playfair font-bold leading-tight">
+          Let’s Talk <br />
+          <span className="text-green-400">Gupta Ji Ki Mojito</span>
+        </h2>
 
-          <ul className="space-y-4 mb-8 text-white font-poppins">
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-white/20 rounded-sm flex-shrink-0" />
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <span>hello@guptajikishikanji.in</span>
-              </div>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-white/20 rounded-sm flex-shrink-0" />
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>+91 98765 43210</span>
-              </div>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-white/20 rounded-sm flex-shrink-0" />
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                <span>Delhi, India</span>
-              </div>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-white/20 rounded-sm flex-shrink-0" />
-              <div className="flex items-center gap-2">
-                <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp Available</span>
-              </div>
-            </li>
-          </ul>
+        <p className="text-lg font-poppins text-gray-100 leading-relaxed">
+          Have feedback, business inquiries, or just wanna say{" "}
+          <span className="italic">"bhot badiya hai"?</span><br />
+          We’d love to hear from you.
+        </p>
 
-          <Button 
-            size="lg" 
-            className="bg-green-600 hover:bg-green-700 text-white font-poppins font-semibold px-8 py-6 text-base rounded-lg transition-all duration-300"
-          >
-            Contact Us
-          </Button>
-        </div>
+        <ul className="space-y-3 text-gray-100 font-poppins">
+          <li className="flex items-center gap-3">
+            <Mail className="w-5 h-5 text-green-400" />
+            <span>hello@guptajikishikanji.in</span>
+          </li>
+          <li className="flex items-center gap-3">
+            <Phone className="w-5 h-5 text-green-400" />
+            <span>+91 98765 43210</span>
+          </li>
+          <li className="flex items-center gap-3">
+            <MapPin className="w-5 h-5 text-green-400" />
+            <span>Delhi, India</span>
+          </li>
+          <li className="flex items-center gap-3">
+            <MessageCircle className="w-5 h-5 text-green-400" />
+            <span>WhatsApp Available</span>
+          </li>
+        </ul>
+
+        <Button
+          size="lg"
+          className="bg-green-600 hover:bg-green-700 text-white font-poppins font-semibold px-8 py-6 text-base rounded-lg shadow-lg transition-all duration-300"
+        >
+          Contact Us
+        </Button>
       </div>
     </section>
+    </>
   );
 };
 

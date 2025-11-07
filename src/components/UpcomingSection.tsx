@@ -30,7 +30,7 @@ const UpcomingSection = () => {
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium font-poppins text-primary">Coming Soon</span>
           </div>
-          <h2 className="mt-4 text-3xl md:text-4xl font-playfair font-bold">Upcoming Flavors</h2>
+          <h2 className="mt-4 text-3xl md:text-4xl font-playfair font-bold">More flavors are coming</h2>
           <p className="mt-3 text-muted-foreground font-poppins">A sneak peek at what we’re mixing next.</p>
         </div>
 

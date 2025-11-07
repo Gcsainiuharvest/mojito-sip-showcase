@@ -6,39 +6,30 @@ import strawberryBottle from "@/assets/product-strawberry.png";
 const ProductShowcase = () => {
   const products = [
     {
-      name: "Strawberry Mojito",
-      tagline: "Berry Sweet, Berry Cool",
+      name: "Strawberry - The Heartbreaker",
+      tagline: "Main sweet bhi hoon, savage bhi.",
       description: [
-        "Sweet strawberries, fizzy treat",
-        "One sip and you're on your feet",
-        "This ain't regular juice, my friend",
-        "It's Guptaji Ki Mojito, berry good till the end!"
+        'Soft smile. Sharp flavour. Instant crush.She flirts, she teases, she leaves you on "seen".Every sip = red-flag worth falling for."Pehla sip, last crush - thats me.”'
       ],
       image: strawberryBottle,
       color: "from-red-400 to-pink-500",
       emoji: "🍓"
     },
     {
-      name: "Watermelon Mojito",
-      tagline: "Garmi ka Toofan, Thandak ka Dhamaka",
+      name: "Watermelon - The Drama Queen",
+      tagline: "Main extra hoon - aur proud of it.",
       description: [
-        "Sweet, juicy, aur poora refreshing",
-        "Tarbooz wali feeling, totally amazing",
-        "Har ghoont mein summer vibes",
-        "This one's for the cool tribes!"
+        "She doesn’t enter a room - she arrives.Juicy, filmy, and full of gossip energy.Sweet talker, attention grabber, total head-turner.“Main hi climax hoon, baaki sab filler scene.”"
       ],
       image: watermelonBottle,
       color: "from-red-400 to-pink-500",
       emoji: "🍉"
     },
     {
-      name: "Mint Mojito",
-      tagline: "Pudina Power, Coolness ka Tower",
+      name: "Mint - The OG Cool Boi",
+      tagline: "Main chill hoon, tu bhi ho ja.",
       description: [
-        "Fresh mint, fizzy delight",
-        "One sip aur everything's right",
-        "Pudina wali chill, no tension",
-        "This mojito deserves a special mention!"
+        "Mint’s that unbothered legend.Cooler than your ex’s excuses, fresher than Monday motivation.When life gets heated - Mint just says, “Bhai, relax.”“Main cool hoon by default, not effort.”"
       ],
       image: mintBottle,
       color: "from-emerald-400 to-green-600",
@@ -55,7 +46,9 @@ const ProductShowcase = () => {
   );
 };
 
-const ProductSection = ({ product, index }: { product: any; index: number }) => {
+
+
+const ProductSection = ({ product, index }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -90,7 +83,13 @@ const ProductSection = ({ product, index }: { product: any; index: number }) => 
       }`}
     >
       <div className="max-w-7xl mx-auto">
-        <div className={`grid md:grid-cols-2 gap-8 items-center ${!isEven ? "md:flex-row-reverse" : ""}`}>
+        <div className={`relative grid md:grid-cols-2 gap-8 items-center transition-all duration-1000 ${
+          isVisible
+            ? "opacity-100 translate-x-0"
+            : isEven
+              ? "opacity-0 -translate-x-full"
+              : "opacity-0 translate-x-full"
+        } ${!isEven ? "md:flex-row-reverse" : ""}`}>
           {/* Image Side */}
           <div
             className={`relative h-[500px] flex items-center justify-center ${
@@ -137,31 +136,23 @@ const ProductSection = ({ product, index }: { product: any; index: number }) => 
             <img
               src={product.image}
               alt={product.name}
-              className={`relative z-10 h-[400px] w-auto object-contain transition-all duration-1000 ${
-                isVisible ? "opacity-100 scale-100 rotate-0" : "opacity-0 scale-75 -rotate-12"
-              }`}
+              className="relative z-10 h-[400px] w-auto object-contain"
             />
           </div>
 
           {/* Text Side */}
           <div className={`space-y-6 ${!isEven ? "md:order-1" : ""}`}>
             <h2
-              className={`text-4xl md:text-5xl lg:text-6xl font-playfair font-bold bg-gradient-to-r ${product.color} bg-clip-text text-transparent transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-              }`}
+              className={`text-4xl md:text-5xl lg:text-6xl font-playfair font-bold bg-gradient-to-r ${product.color} bg-clip-text text-transparent`}
             >
-              {product.tagline}
+              {product.name}
             </h2>
+            <h3 className="text-foreground">{product.tagline}</h3>
             <div className="space-y-3">
               {product.description.map((line: string, i: number) => (
                 <p
                   key={i}
-                  className={`text-lg md:text-xl text-foreground/80 font-poppins transition-all duration-700`}
-                  style={{
-                    transitionDelay: `${(i + 2) * 100}ms`,
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? "translateX(0)" : "translateX(-20px)"
-                  }}
+                  className="text-lg md:text-xl text-foreground font-poppins"
                 >
                   {line}
                 </p>
