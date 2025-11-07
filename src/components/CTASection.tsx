@@ -6,11 +6,11 @@ const CTASection = () => {
   return (
     <section id="contact" className="relative py-20 px-4 bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700 overflow-hidden">
       {/* Background Image */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full flex items-center justify-end">
+      <div className="absolute right-0 bottom-0 w-full md:w-2/3 lg:w-1/2 h-2/3 md:h-3/4 lg:h-full flex items-end justify-end pointer-events-none">
         <img 
           src={bottlesImage} 
           alt="Gupta Ji Ki Mojito bottles" 
-          className="h-full w-auto object-contain opacity-90"
+          className="h-full w-auto object-contain object-right-bottom opacity-90"
         />
       </div>
 
