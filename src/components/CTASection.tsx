@@ -1,9 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin } from "lucide-react";
+import ctaBackground from "@/assets/cta-background.png";
 
 const CTASection = () => {
   return (
     <section id="contact" className="py-20 px-4 bg-gradient-fresh relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+        <img 
+          src={ctaBackground} 
+          alt="Mojito bottles" 
+          className="w-full max-w-2xl h-auto object-contain opacity-20 animate-float"
+        />
+      </div>
+      
       {/* Decorative circles */}
       <div className="absolute top-10 left-20 w-32 h-32 bg-primary-foreground/10 rounded-full blur-2xl" />
       <div className="absolute bottom-20 right-20 w-40 h-40 bg-primary-foreground/10 rounded-full blur-2xl" />
