@@ -136,42 +136,8 @@ const ProductSection = ({ product, index }) => {
                   : "opacity-0 translate-x-20 scale-90"
             } ${!isEven ? "md:order-2" : ""}`}
           >
-            {/* Dynamic Floating Decorative Elements */}
-            {product.decorEmojis.map((emoji, idx) => (
-              <div
-                key={idx}
-                className={`absolute text-4xl md:text-6xl transition-all duration-700 ${
-                  isVisible ? "opacity-70 animate-float" : "opacity-0"
-                } ${isHovered ? 'scale-125' : 'scale-100'}`}
-                style={{
-                  top: `${15 + idx * 25}%`,
-                  left: idx % 2 === 0 ? '5%' : 'auto',
-                  right: idx % 2 === 1 ? '5%' : 'auto',
-                  animationDelay: `${idx * 0.3}s`,
-                  filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.2))',
-                  transition: 'all 0.7s ease-out'
-                }}
-              >
-                {emoji}
-              </div>
-            ))}
-
-            {/* Glowing Gradient Card Background */}
-            <div
-              className={`absolute inset-0 bg-gradient-to-br ${product.gradient} rounded-3xl opacity-10 blur-2xl transition-all duration-1000 ${
-                isVisible ? 'scale-100 rotate-0' : 'scale-75 rotate-12'
-              } ${isHovered ? 'opacity-20 scale-110' : ''}`}
-            />
-
-            {/* Accent Ring */}
-            <div
-              className={`absolute inset-8 border-2 rounded-3xl transition-all duration-1000 ${
-                isVisible ? 'opacity-30 scale-100' : 'opacity-0 scale-90'
-              }`}
-              style={{
-                borderImage: `linear-gradient(135deg, ${product.accentColor}, transparent) 1`,
-              }}
-            />
+            {/* Connector Line to Timeline */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-20 bg-gradient-to-b from-emerald-500 to-transparent hidden md:block z-0" />
 
             {/* Product Bottle with Enhanced Animation */}
             <div className="relative z-10 transition-all duration-700 ease-out" style={{
@@ -189,22 +155,6 @@ const ProductSection = ({ product, index }) => {
                 }}
               />
             </div>
-
-            {/* Sparkle Effects */}
-            {[...Array(3)].map((_, idx) => (
-              <div
-                key={`sparkle-${idx}`}
-                className={`absolute w-2 h-2 bg-white rounded-full transition-all duration-1000 ${
-                  isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
-                }`}
-                style={{
-                  top: `${20 + idx * 30}%`,
-                  right: `${10 + idx * 15}%`,
-                  animationDelay: `${idx * 0.4}s`,
-                  boxShadow: `0 0 20px ${product.accentColor}`,
-                }}
-              />
-            ))}
           </div>
 
           {/* Text Side with Staggered Animations */}
@@ -232,14 +182,6 @@ const ProductSection = ({ product, index }) => {
               </p>
             </div>
 
-            {/* Price Badge */}
-            <div className={`transition-all duration-1000 delay-200 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}>
-              <div className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${product.gradient} rounded-full shadow-lg hover:shadow-xl transition-shadow`}>
-                <span className="text-3xl font-bold text-white">{product.price}</span>
-              </div>
-            </div>
 
             {/* Description */}
             <div className={`transition-all duration-1000 delay-300 ${
@@ -250,20 +192,6 @@ const ProductSection = ({ product, index }) => {
               </p>
             </div>
 
-            {/* Decorative Elements */}
-            <div className={`flex gap-4 pt-4 transition-all duration-1000 delay-400 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}>
-              {product.decorEmojis.map((emoji, idx) => (
-                <div
-                  key={`text-emoji-${idx}`}
-                  className="text-4xl animate-float"
-                  style={{ animationDelay: `${idx * 0.5}s` }}
-                >
-                  {emoji}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
