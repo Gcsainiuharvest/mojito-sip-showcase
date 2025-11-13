@@ -2,14 +2,14 @@ import { Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-[#99cc33] to-[#ffcc66] text-white py-12 px-4">
+    <footer className="bg-[#99cc33] text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <img
               src="/images/logo.png"
               alt="Gupta Ji Ki Mojito Logo"
-              className="h-16 w-auto mb-4"
+              className="h-20 w-auto mb-4"
             />
             <p className="font-poppins text-sm text-white/80">
                India’s Taste of Chill. Gupta ji ki Mojito
@@ -47,7 +47,7 @@ const Footer = () => {
               <img
                 src="/images/makeinindia.png"
                 alt="Make in India Logo"
-                className="h-20 w-auto"
+                className="h-16 w-auto"
               />
               <img
                 src="/images/fssai-logo.png"

@@ -20,8 +20,8 @@ const CTASection = () => {
         id="contact"
         className="relative w-full h-[550px] bg-cover bg-center flex items-center"
       >
-      {/* Overlay gradient for better text visibility */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
+      {/* Overlay for better text visibility */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Text Content */}
       <div className="relative z-10 pl-6 md:pl-20 text-white max-w-xl space-y-6">

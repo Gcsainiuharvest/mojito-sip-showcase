@@ -2,58 +2,26 @@ import { useEffect, useRef, useState } from "react";
 import mintBottle from "@/assets/MintProductImage.png";
 
 const ProductShowcase = () => {
-  const products = [
-    {
-      name: "FRESH MINT",
-      tagline: "The Beginning",
-      price: "₹10",
-      description: "It all starts with the freshest mint leaves, handpicked for their vibrant aroma and cooling essence. This is where the magic begins - the foundation of every perfect mojito.",
-      image: mintBottle,
-      gradient: "from-[#99cc33] via-[#aadd44] to-[#88bb22]",
-      accentColor: "rgb(153, 204, 51)",
-    },
-    {
-      name: "PERFECT BLEND",
-      tagline: "The Crafting",
-      price: "₹10",
-      description: "Each bottle is carefully crafted with premium ingredients - fresh mint, zesty lime, and just the right touch of sweetness. Mixed to perfection for that authentic mojito experience.",
-      image: mintBottle,
-      gradient: "from-[#99cc33] via-[#aadd44] to-[#88bb22]",
-      accentColor: "rgb(153, 204, 51)",
-    },
-    {
-      name: "PURE REFRESHMENT",
-      tagline: "The Experience",
-      price: "₹10",
-      description: "The final result - a perfectly balanced mojito that refreshes instantly. Cool, crisp, and incredibly satisfying. This is the taste that turns every moment into a celebration.",
-      image: mintBottle,
-      gradient: "from-[#99cc33] via-[#aadd44] to-[#88bb22]",
-      accentColor: "rgb(153, 204, 51)",
-    }
-  ];
-
   return (
     <div className="w-full relative">
       {/* Connecting Timeline Line */}
       <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#99cc33] via-[#aadd44] to-[#88bb22] hidden md:block z-0 opacity-30" />
-      
-      {products.map((product, index) => (
-        <div key={index} className="relative">
-          <ProductSection product={product} index={index} />
-          
-          {/* Timeline Node */}
-          <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-[#99cc33] rounded-full border-4 border-background hidden md:block z-10 shadow-lg"
-            style={{ top: '50%' }}
-          />
-        </div>
-      ))}
+
+      <div className="relative">
+        <ProductSection />
+
+        {/* Timeline Node */}
+        <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-[#99cc33] rounded-full border-4 border-background hidden md:block z-10 shadow-lg"
+          style={{ top: '50%' }}
+        />
+      </div>
     </div>
   );
 };
 
 
 
-const ProductSection = ({ product, index }) => {
+const ProductSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -79,7 +47,15 @@ const ProductSection = ({ product, index }) => {
     };
   }, []);
 
-  const isEven = index % 2 === 0;
+  const product = {
+    name: "THE OG DRINK - MINT MOJITO ₹10",
+    tagline: "Café-Style Mojito, Now for Every Home & Counter!",
+    description: "Fresh, fizzy, and timeless - our Mint Mojito is the original mood-lifter that everyone craveWhether you’re serving guests at your café, restocking your store, or sipping at home, one thing stays constant, the café-style freshness, sealed and ready at just ₹10.Blended with crisp mint, tangy lemon, and that signature café sparkle, it’s the drink that turns any moment into a chill moment.",
+    image: mintBottle,
+    gradient: "from-[#99cc33] via-[#aadd44] to-[#88bb22]",
+  };
+
+  const isEven = true;
 
   return (
     <section
@@ -88,59 +64,44 @@ const ProductSection = ({ product, index }) => {
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div 
+        <div
           className={`absolute w-96 h-96 bg-gradient-to-br ${product.gradient} rounded-full blur-3xl opacity-10 transition-all duration-1000 ${
             isVisible ? 'scale-100' : 'scale-0'
           }`}
           style={{
-            top: isEven ? '10%' : 'auto',
-            bottom: isEven ? 'auto' : '10%',
-            left: isEven ? '5%' : 'auto',
-            right: isEven ? 'auto' : '5%',
+            top: '10%',
+            left: '5%',
           }}
         />
-        <div 
+        <div
           className={`absolute w-72 h-72 bg-gradient-to-br ${product.gradient} rounded-full blur-3xl opacity-10 transition-all duration-1000 delay-200 ${
             isVisible ? 'scale-100' : 'scale-0'
           }`}
           style={{
-            top: isEven ? 'auto' : '20%',
-            bottom: isEven ? '20%' : 'auto',
-            left: isEven ? 'auto' : '10%',
-            right: isEven ? '10%' : 'auto',
+            bottom: '20%',
+            right: '10%',
           }}
         />
       </div>
 
       <div className="max-w-7xl mx-auto">
-        <div 
-          className={`relative grid md:grid-cols-2 gap-12 lg:gap-20 items-center ${
-            !isEven ? "md:flex-row-reverse" : ""
-          }`}
+        <div
+          className="relative grid md:grid-cols-2 gap-12 lg:gap-20 items-center"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          {/* Image Side with Enhanced Animations */}
-          <div
-            className={`relative h-[700px] flex items-center justify-center transition-all duration-1000 ${
-              isVisible
-                ? "opacity-100 translate-x-0 scale-100"
-                : isEven
-                  ? "opacity-0 -translate-x-20 scale-90"
-                  : "opacity-0 translate-x-20 scale-90"
-            } ${!isEven ? "md:order-2" : ""}`}
-          >
-            {/* Connector Line to Timeline */}
-            {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-20 bg-[#99cc33] hidden md:block z-0" /> */}
 
-            {/* Product Bottle with Enhanced Animation */}
+          <div
+            className="relative h-[750px] flex items-center justify-center transition-all duration-1000 opacity-100 translate-x-0 scale-100"
+          >
+          
             <div className="relative z-10 transition-all duration-700 ease-out" style={{
               transform: isHovered ? 'translateY(-10px) scale(1.05)' : 'translateY(0) scale(1)',
             }}>
               <img
                 src={product.image}
                 alt={product.name}
-                className={`h-[600px] md:h-[600px] w-auto object-contain transition-all duration-1000 ${
+                className={`h-[750px] md:h-[750px] w-auto object-contain transition-all duration-1000 ${
                   isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
                 }`}
                 style={{
@@ -151,38 +112,40 @@ const ProductSection = ({ product, index }) => {
             </div>
           </div>
 
-          {/* Text Side with Staggered Animations */}
-          <div className={`space-y-8 ${!isEven ? "md:order-1" : ""}`}>
-            {/* Title with Gradient */}
+          <div className="space-y-8">
             <div className={`transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}>
-              <h2
-                className={`text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-[#99cc33] mb-3 leading-tight`}
-              >
-                {product.name}
-              </h2>
+               <h2 className="font-playfair text-4xl md:text-5xl font-black  leading-none mb-4">
+              {product.name}
+            </h2>
+             
               <div className={`h-1.5 w-24 bg-gradient-to-r ${product.gradient} rounded-full transition-all duration-700 ${
                 isVisible ? 'w-24' : 'w-0'
               }`} style={{ transitionDelay: '0.3s' }} />
             </div>
 
-            {/* Tagline */}
             <div className={`transition-all duration-1000 delay-100 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}>
-              <p className="text-2xl md:text-3xl font-semibold text-foreground/90 italic">
+              <p className="text-2xl md:text-2xl font-semibold text-foreground/90 italic">
                 {product.tagline}
               </p>
             </div>
 
-
-            {/* Description */}
             <div className={`transition-all duration-1000 delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}>
-              <p className="text-lg md:text-xl leading-relaxed text-foreground/80 font-poppins">
+              <p className="text-lg md:text-xl leading-relaxed text-foreground/80 font-poppins font-serif italic">
                 {product.description}
+              </p>
+            </div>
+             <div className={`transition-all duration-1000 delay-300 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}>
+              <p className="text-lg md:text-xl leading-relaxed text-foreground/80 font-poppins font-serif italic">
+                <b>Shelf Life: 4 Months of Pure, Minty Goodness
+<br/>It’s more than a drink - it’s an instant café experience, ready to pour and share.</b>
               </p>
             </div>
 
