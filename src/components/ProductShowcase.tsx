@@ -6,11 +6,10 @@ import strawberryBottle from "@/assets/product-strawberry.png";
 const ProductShowcase = () => {
   const products = [
     {
-      name: "Strawberry - The Heartbreaker",
-      tagline: "Main sweet bhi hoon, savage bhi.",
-      description: [
-        'Soft smile. Sharp flavour. Instant crush.She flirts, she teases, she leaves you on "seen".Every sip = red-flag worth falling for."Pehla sip, last crush - thats me.”'
-      ],
+      name: "THE OG DRINK - MINT MOJITO ₹10",
+      tagline: "Café-Style Mojito, Now for Every Home & Counter!",
+      description: ['Fresh, fizzy, and timeless - our Mint Mojito is the original mood-lifter that everyone craves. Blended with crisp mint, tangy lemon, and that signature café sparkle, it’s the drink that turns any moment into a chill moment.'
+             ],
       image: strawberryBottle,
       color: "from-red-400 to-pink-500",
       emoji: "🍓"

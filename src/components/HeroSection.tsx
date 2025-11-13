@@ -13,8 +13,8 @@ const HeroSection = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/images/HeaderMobile.mp4" type="video/mp4" media="(max-width: 767px)" />
-          <source src="/images/HeaderDesktop.mp4" type="video/mp4" media="(min-width: 768px)" />
+          <source src="/images/HeaderMobile_2.mp4" type="video/mp4" media="(max-width: 767px)" />
+          <source src="/images/HeaderDesktop3.mp4" type="video/mp4" media="(min-width: 768px)" />
         </video>
         <div className="absolute inset-0 bg-gradient-hero" />
       </div>
@@ -25,21 +25,20 @@ const HeroSection = () => {
           <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
             <Leaf className="w-4 h-4 text-primary-glow" />
             <span className="text-sm font-poppins font-medium text-primary-foreground">
-              100% Natural & Fresh
+              Fresh Mojito
             </span>
           </div>
 
           <h1 className="mb-6 text-5xl md:text-7xl font-playfair font-black text-primary-foreground leading-tight">
-            <span className="block">Drama, Romance</span>
-            <span className="block italic bg-gradient-fresh bg-clip-text text-transparent">
-              Aur Thandak ab sirf ₹10 mein!
+            <span className="block">Café Wala Mojito,</span>
+            <span className="block italic bg-gradient-fresh bg-clip-text text-primary-foreground" style={{paddingTop:14}}>
+               Ab Sirf ₹10 Mein!
             </span>
           </h1>
 
           <p className="mb-8 text-lg md:text-xl text-primary-foreground/90 font-poppins font-light max-w-2xl mx-auto">
-            Same café chill, now in a desi bottle fizzy, minty, and full of
-            Gupta Ji swag.
-            <span className="block mt-2 font-medium"> Meet the Flavours.</span>
+           The taste you loved at cafés - now bottled, chilled, and ready to sip anytime
+            {/* <span className="block mt-2 font-medium"> Meet the Flavours.</span> */}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

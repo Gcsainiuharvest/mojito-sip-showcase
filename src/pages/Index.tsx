@@ -27,10 +27,10 @@ const Index = () => {
       <BannerSection />
       {/* <AboutSection /> */}
       <ProductShowcase />
-      <ProductsSection />
+      {/* <ProductsSection /> */}
       {/* <UpcomingSection /> */}
       {/* <FlavorsSection /> */}
-      <IngredientsSection />
+      {/* <IngredientsSection /> */}
       <TestimonialsSection />
       <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
       <iframe

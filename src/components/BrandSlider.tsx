@@ -35,7 +35,7 @@ const BrandSlider = () => {
             setTimeout(() => {
               imageContainer.classList.add('animate-pop-up');
               imageContainer.classList.remove('opacity-0');
-            }, 800);
+            }, 200);
           }
           observer.unobserve(entry.target);
         }
@@ -62,9 +62,12 @@ const BrandSlider = () => {
               {s.sub}
             </p>
             <div className="space-y-3 text-muted-foreground/90 font-poppins opacity-0 animate-on-scroll">
-              <p>When life gives Gupta Ji lemons, he makes legendary mojitos!</p>
-              <p>From minty thandak to strawberry fizz, every bottle packs sass and satisfaction.</p>
-              <p>Because at Gupta Ji Ki Mojito — thirst bhi bujhegi, swag bhi milega!</p>
+              <p><b>Gupta Ji Ki Mojito</b> is not just a drink - it’s India’s answer to the café craze</p>
+              <p> A D2C brand that serves authentic, fizzy mojitos - straight from the maker to your fridge. No middlemen. No dilution. Just pure freshness in every sip.</p>
+              <p>We’ve taken the global mojito trend and given it a proudly Indian identity - minty, tangy, fizzy, and perfectly crafted for our taste buds.
+ Whether it’s a house party, study break, or just chilling with friends, Gupta Ji Ki Mojito makes every moment feel café-style cool.
+</p>
+<p><b>India ka apna mojito - refreshing, affordable, and full of nostalgia.</b></p>
             </div>
           </div>
 

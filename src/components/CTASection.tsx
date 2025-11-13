@@ -25,15 +25,21 @@ const CTASection = () => {
 
       {/* Text Content */}
       <div className="relative z-10 pl-6 md:pl-20 text-white max-w-xl space-y-6">
-        <h2 className="text-4xl md:text-6xl font-playfair font-bold leading-tight">
-          Let’s Talk <br />
-          <span className="text-green-400">Gupta Ji Ki Mojito</span>
+        <h2 className="text-4xl md:text-4xl font-playfair font-bold leading-tight">
+          LET’S CONNECT <br />
+          <span className="text-green-400">We’d love to hear from you.
+</span>
         </h2>
 
         <p className="text-lg font-poppins text-gray-100 leading-relaxed">
-          Have feedback, business inquiries, or just wanna say{" "}
-          <span className="italic">"bhot badiya hai"?</span><br />
-          We’d love to hear from you.
+          For partnerships, collaborations, or distribution opportunities,
+          <span className="italic">reach out at +91 9999610690</span><br />
+        </p>
+
+<p className="text-lg font-poppins text-gray-100 leading-relaxed">
+          Whether you’re a retailer, distributor, HoReCa partner, or simply someone who loves good drinks —
+
+          <span className="italic"> we’re always open to building connections that fizz with potential.</span><br />
         </p>
 
         <ul className="space-y-3 text-gray-100 font-poppins">
@@ -43,7 +49,7 @@ const CTASection = () => {
           </li>
           <li className="flex items-center gap-3">
             <Phone className="w-5 h-5 text-green-400" />
-            <span>+91 98765 43210</span>
+            <span>+91 9999610690</span>
           </li>
           <li className="flex items-center gap-3">
             <MapPin className="w-5 h-5 text-green-400" />
@@ -55,12 +61,12 @@ const CTASection = () => {
           </li>
         </ul>
 
-        <Button
+        {/* <Button
           size="lg"
           className="bg-green-600 hover:bg-green-700 text-white font-poppins font-semibold px-8 py-6 text-base rounded-lg shadow-lg transition-all duration-300"
         >
           Contact Us
-        </Button>
+        </Button> */}
       </div>
     </section>
     </>
