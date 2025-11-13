@@ -52,22 +52,19 @@ const BrandSlider = () => {
         <div className="grid md:grid-cols-12 gap-6 items-center">
           {/* Copy */}
           <div className="md:col-span-6 text-center md:text-left">
-            <p className="font-playfair text-2xl md:text-4xl italic text-card-foreground/80 mb-2 opacity-0 animate-on-scroll">
-             Not Just a Drink,
-            </p>
-            <h2 className="font-playfair text-5xl md:text-7xl font-black leading-none mb-4 opacity-0 animate-on-scroll">
-              It’s an Emotion
+            {/* <p className="font-playfair text-2xl md:text-4xl italic text-card-foreground/80 mb-2 opacity-0 animate-on-scroll">
+            
+            </p> */}
+            <h2 className="font-playfair text-4xl md:text-5xl font-black italic leading-none mb-4 opacity-0 animate-on-scroll">
+               Gupta Ji Ki Mojito,
             </h2>
-            <p className="font-poppins text-muted-foreground mb-6 opacity-0 animate-on-scroll leading-7">
-              {s.sub}
-            </p>
+            <p className="font-poppins text-muted-foreground mb-6 opacity-0 animate-on-scroll leading-7 text-2xl">
+               <b>It’s India’s answer to the café craze</b>            </p>
             <div className="space-y-3 text-muted-foreground/90 font-poppins opacity-0 animate-on-scroll">
-              <p><b>Gupta Ji Ki Mojito</b> is not just a drink - it’s India’s answer to the café craze</p>
               <p> A D2C brand that serves authentic, fizzy mojitos - straight from the maker to your fridge. No middlemen. No dilution. Just pure freshness in every sip.</p>
-              <p>We’ve taken the global mojito trend and given it a proudly Indian identity - minty, tangy, fizzy, and perfectly crafted for our taste buds.
- Whether it’s a house party, study break, or just chilling with friends, Gupta Ji Ki Mojito makes every moment feel café-style cool.
-</p>
-<p><b>India ka apna mojito - refreshing, affordable, and full of nostalgia.</b></p>
+              <p>We’ve taken the global mojito trend and given it a proudly Indian identity - minty, tangy, fizzy, and perfectly crafted for our taste buds.</p>
+              <p>Whether it’s a house party, study break, or just chilling with friends, Gupta Ji Ki Mojito makes every moment feel café-style cool.</p>
+              <p style={{fontSize:18}}><b>India Ka Apna Mojito - refreshing, affordable, and full of Café vibe.</b></p>
             </div>
           </div>
 

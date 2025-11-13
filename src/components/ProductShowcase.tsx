@@ -131,7 +131,7 @@ const ProductSection = ({ product, index }) => {
             } ${!isEven ? "md:order-2" : ""}`}
           >
             {/* Connector Line to Timeline */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-20 bg-[#99cc33] hidden md:block z-0" />
+            {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-20 bg-[#99cc33] hidden md:block z-0" /> */}
 
             {/* Product Bottle with Enhanced Animation */}
             <div className="relative z-10 transition-all duration-700 ease-out" style={{

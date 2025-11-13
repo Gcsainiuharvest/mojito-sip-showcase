@@ -26,30 +26,25 @@ const CTASection = () => {
       {/* Text Content */}
       <div className="relative z-10 pl-6 md:pl-20 text-white max-w-xl space-y-6">
         <h2 className="text-4xl md:text-4xl font-playfair font-bold leading-tight">
-          LET’S CONNECT <br />
-          <span className="text-[#99cc33]">We’d love to hear from you.
+         
+          <span className="text-[#99cc33]">Let’s Keep the Chill Flowing.
+
 </span>
         </h2>
 
         <p className="text-lg font-poppins text-gray-100 leading-relaxed">
-          For partnerships, collaborations, or distribution opportunities,
-          <span className="italic">reach out at +91 9999610690</span><br />
+         For partnerships, collaborations, or distribution —
+
+          <span className="italic"> connect with the team behind your favourite ₹10 refresher.</span><br />
         </p>
-
-<p className="text-lg font-poppins text-gray-100 leading-relaxed">
-          Whether you’re a retailer, distributor, HoReCa partner, or simply someone who loves good drinks —
-
-          <span className="italic"> we’re always open to building connections that fizz with potential.</span><br />
-        </p>
-
         <ul className="space-y-3 text-gray-100 font-poppins">
           <li className="flex items-center gap-3">
             <Mail className="w-5 h-5 text-[#99cc33]" />
-            <span>hello@guptajikishikanji.in</span>
+            <span> guptaji@uharvest.in</span>
           </li>
           <li className="flex items-center gap-3">
             <Phone className="w-5 h-5 text-[#99cc33]" />
-            <span>+91 9999610690</span>
+            <span>+91 88266 63762</span>
           </li>
           <li className="flex items-center gap-3">
             <MapPin className="w-5 h-5 text-[#99cc33]" />

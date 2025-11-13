@@ -49,13 +49,7 @@ const HeroSection = () => {
               <Sparkles className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
               Order Now
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="font-poppins font-semibold px-8 py-6 text-lg border-2 border-primary-foreground/30 text-primary-foreground bg-transparent backdrop-blur-sm hover:bg-primary-foreground/10 hover:border-primary-foreground/50 transition-all duration-300"
-            >
-              View Flavors
-            </Button>
+           
           </div>
         </div>
 
