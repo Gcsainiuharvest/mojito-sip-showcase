@@ -1,49 +1,57 @@
 import { useEffect, useRef, useState } from "react";
 import mintBottle from "@/assets/product-mint.png";
-import watermelonBottle from "@/assets/product-watermelon.png";
-import strawberryBottle from "@/assets/product-strawberry.png";
 
 const ProductShowcase = () => {
   const products = [
     {
-      name: "STRAWBERRY MOJITO",
-      tagline: "Grami ka Toofan!",
+      name: "FRESH MINT",
+      tagline: "The Beginning",
       price: "₹10",
-      description: "Fresh, fizzy, and timeless - our Strawberry Mojito is the original mood-lifter that everyone craves. Blended with sweet strawberries, tangy lemon, and that signature café sparkle, it's the drink that turns any moment into a celebration.",
-      image: strawberryBottle,
-      gradient: "from-pink-500 via-red-400 to-pink-600",
-      accentColor: "rgb(236, 72, 153)",
-      emoji: "🍓",
-      decorEmojis: ["🍓", "✨", "💫"]
-    },
-    {
-      name: "WATERMELON MOJITO",
-      tagline: "The Drama Queen",
-      price: "₹10",
-      description: "She doesn't enter a room - she arrives. Juicy, filmy, and full of gossip energy. Sweet talker, attention grabber, total head-turner. Main hi climax hoon, baaki sab filler scene.",
-      image: watermelonBottle,
-      gradient: "from-red-500 via-pink-400 to-red-600",
-      accentColor: "rgb(239, 68, 68)",
-      emoji: "🍉",
-      decorEmojis: ["🍉", "💦", "🌊"]
-    },
-    {
-      name: "MINT MOJITO",
-      tagline: "The OG Cool Boi",
-      price: "₹10",
-      description: "Mint's that unbothered legend. Cooler than your ex's excuses, fresher than Monday motivation. When life gets heated - Mint just says, 'Bhai, relax.' Main cool hoon by default, not effort.",
+      description: "It all starts with the freshest mint leaves, handpicked for their vibrant aroma and cooling essence. This is where the magic begins - the foundation of every perfect mojito.",
       image: mintBottle,
       gradient: "from-emerald-500 via-green-400 to-emerald-600",
       accentColor: "rgb(16, 185, 129)",
       emoji: "🌿",
-      decorEmojis: ["🌿", "🍋", "✨"]
+      decorEmojis: ["🌿", "🍃", "✨"]
+    },
+    {
+      name: "PERFECT BLEND",
+      tagline: "The Crafting",
+      price: "₹10",
+      description: "Each bottle is carefully crafted with premium ingredients - fresh mint, zesty lime, and just the right touch of sweetness. Mixed to perfection for that authentic mojito experience.",
+      image: mintBottle,
+      gradient: "from-emerald-500 via-green-400 to-emerald-600",
+      accentColor: "rgb(16, 185, 129)",
+      emoji: "🌿",
+      decorEmojis: ["🌿", "🍋", "💫"]
+    },
+    {
+      name: "PURE REFRESHMENT",
+      tagline: "The Experience",
+      price: "₹10",
+      description: "The final result - a perfectly balanced mojito that refreshes instantly. Cool, crisp, and incredibly satisfying. This is the taste that turns every moment into a celebration.",
+      image: mintBottle,
+      gradient: "from-emerald-500 via-green-400 to-emerald-600",
+      accentColor: "rgb(16, 185, 129)",
+      emoji: "🌿",
+      decorEmojis: ["🌿", "✨", "🎉"]
     }
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
+      {/* Connecting Timeline Line */}
+      <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-500 via-green-400 to-emerald-600 hidden md:block z-0 opacity-30" />
+      
       {products.map((product, index) => (
-        <ProductSection key={index} product={product} index={index} />
+        <div key={index} className="relative">
+          <ProductSection product={product} index={index} />
+          
+          {/* Timeline Node */}
+          <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-emerald-500 rounded-full border-4 border-background hidden md:block z-10 shadow-lg"
+            style={{ top: '50%' }}
+          />
+        </div>
       ))}
     </div>
   );
