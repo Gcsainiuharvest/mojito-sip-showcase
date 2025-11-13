@@ -33,7 +33,7 @@ const ProductsSection = () => {
     <section id="products" className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold">Meet Your Mood Bottled</h2>
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold">FRESH MINT and PURE REFRESHMENT PERFECT BLEND</h2>
           <p className="mt-3 text-muted-foreground font-poppins">Not just drinks, these guys have personalities.
 Mint’s chillin’, Watermelon’s flexin’, Strawberry’s flirtin’. Who you vibin’ with today?
 </p>
@@ -61,7 +61,7 @@ Mint’s chillin’, Watermelon’s flexin’, Strawberry’s flirtin’. Who yo
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="relative z-10 w-56 h-auto object-cover rounded-2xl ring-2 backdrop-blur-sm transition-all duration-700 ease-[cubic-bezier(.2,.8,.2,1)] group-hover:scale-105 group-hover:rotate-1"
+                    className="relative z-10 w-80 h-auto object-cover rounded-2xl ring-2 backdrop-blur-sm transition-all duration-700 ease-[cubic-bezier(.2,.8,.2,1)] group-hover:scale-105 group-hover:rotate-1"
                     style={{ boxShadow: "0 30px 60px -15px rgba(0,0,0,0.35)" }}
                   />
                   {/* Floating sparkle dots */}

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import mintBottle from "@/assets/product-mint.png";
+import mintBottle from "@/assets/MintProductImage.png";
 
 const ProductShowcase = () => {
   const products = [
@@ -9,10 +9,8 @@ const ProductShowcase = () => {
       price: "₹10",
       description: "It all starts with the freshest mint leaves, handpicked for their vibrant aroma and cooling essence. This is where the magic begins - the foundation of every perfect mojito.",
       image: mintBottle,
-      gradient: "from-emerald-500 via-green-400 to-emerald-600",
-      accentColor: "rgb(16, 185, 129)",
-      emoji: "🌿",
-      decorEmojis: ["🌿", "🍃", "✨"]
+      gradient: "from-[#99cc33] via-[#aadd44] to-[#88bb22]",
+      accentColor: "rgb(153, 204, 51)",
     },
     {
       name: "PERFECT BLEND",
@@ -20,10 +18,8 @@ const ProductShowcase = () => {
       price: "₹10",
       description: "Each bottle is carefully crafted with premium ingredients - fresh mint, zesty lime, and just the right touch of sweetness. Mixed to perfection for that authentic mojito experience.",
       image: mintBottle,
-      gradient: "from-emerald-500 via-green-400 to-emerald-600",
-      accentColor: "rgb(16, 185, 129)",
-      emoji: "🌿",
-      decorEmojis: ["🌿", "🍋", "💫"]
+      gradient: "from-[#99cc33] via-[#aadd44] to-[#88bb22]",
+      accentColor: "rgb(153, 204, 51)",
     },
     {
       name: "PURE REFRESHMENT",
@@ -31,24 +27,22 @@ const ProductShowcase = () => {
       price: "₹10",
       description: "The final result - a perfectly balanced mojito that refreshes instantly. Cool, crisp, and incredibly satisfying. This is the taste that turns every moment into a celebration.",
       image: mintBottle,
-      gradient: "from-emerald-500 via-green-400 to-emerald-600",
-      accentColor: "rgb(16, 185, 129)",
-      emoji: "🌿",
-      decorEmojis: ["🌿", "✨", "🎉"]
+      gradient: "from-[#99cc33] via-[#aadd44] to-[#88bb22]",
+      accentColor: "rgb(153, 204, 51)",
     }
   ];
 
   return (
     <div className="w-full relative">
       {/* Connecting Timeline Line */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-500 via-green-400 to-emerald-600 hidden md:block z-0 opacity-30" />
+      <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#99cc33] via-[#aadd44] to-[#88bb22] hidden md:block z-0 opacity-30" />
       
       {products.map((product, index) => (
         <div key={index} className="relative">
           <ProductSection product={product} index={index} />
           
           {/* Timeline Node */}
-          <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-emerald-500 rounded-full border-4 border-background hidden md:block z-10 shadow-lg"
+          <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-[#99cc33] rounded-full border-4 border-background hidden md:block z-10 shadow-lg"
             style={{ top: '50%' }}
           />
         </div>
@@ -128,7 +122,7 @@ const ProductSection = ({ product, index }) => {
         >
           {/* Image Side with Enhanced Animations */}
           <div
-            className={`relative h-[600px] flex items-center justify-center transition-all duration-1000 ${
+            className={`relative h-[700px] flex items-center justify-center transition-all duration-1000 ${
               isVisible
                 ? "opacity-100 translate-x-0 scale-100"
                 : isEven
@@ -137,7 +131,7 @@ const ProductSection = ({ product, index }) => {
             } ${!isEven ? "md:order-2" : ""}`}
           >
             {/* Connector Line to Timeline */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-20 bg-gradient-to-b from-emerald-500 to-transparent hidden md:block z-0" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-20 bg-[#99cc33] hidden md:block z-0" />
 
             {/* Product Bottle with Enhanced Animation */}
             <div className="relative z-10 transition-all duration-700 ease-out" style={{
@@ -146,7 +140,7 @@ const ProductSection = ({ product, index }) => {
               <img
                 src={product.image}
                 alt={product.name}
-                className={`h-[450px] md:h-[500px] w-auto object-contain transition-all duration-1000 ${
+                className={`h-[600px] md:h-[600px] w-auto object-contain transition-all duration-1000 ${
                   isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
                 }`}
                 style={{
@@ -164,7 +158,7 @@ const ProductSection = ({ product, index }) => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}>
               <h2
-                className={`text-5xl md:text-6xl lg:text-7xl font-playfair font-bold bg-gradient-to-r ${product.gradient} bg-clip-text text-transparent mb-3 leading-tight`}
+                className={`text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-[#99cc33] mb-3 leading-tight`}
               >
                 {product.name}
               </h2>

@@ -27,7 +27,7 @@ const CTASection = () => {
       <div className="relative z-10 pl-6 md:pl-20 text-white max-w-xl space-y-6">
         <h2 className="text-4xl md:text-4xl font-playfair font-bold leading-tight">
           LET’S CONNECT <br />
-          <span className="text-green-400">We’d love to hear from you.
+          <span className="text-[#99cc33]">We’d love to hear from you.
 </span>
         </h2>
 
@@ -44,19 +44,19 @@ const CTASection = () => {
 
         <ul className="space-y-3 text-gray-100 font-poppins">
           <li className="flex items-center gap-3">
-            <Mail className="w-5 h-5 text-green-400" />
+            <Mail className="w-5 h-5 text-[#99cc33]" />
             <span>hello@guptajikishikanji.in</span>
           </li>
           <li className="flex items-center gap-3">
-            <Phone className="w-5 h-5 text-green-400" />
+            <Phone className="w-5 h-5 text-[#99cc33]" />
             <span>+91 9999610690</span>
           </li>
           <li className="flex items-center gap-3">
-            <MapPin className="w-5 h-5 text-green-400" />
+            <MapPin className="w-5 h-5 text-[#99cc33]" />
             <span>Delhi, India</span>
           </li>
           <li className="flex items-center gap-3">
-            <MessageCircle className="w-5 h-5 text-green-400" />
+            <MessageCircle className="w-5 h-5 text-[#99cc33]" />
             <span>WhatsApp Available</span>
           </li>
         </ul>

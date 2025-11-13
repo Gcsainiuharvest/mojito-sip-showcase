@@ -2,7 +2,7 @@ import { Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-emerald-600 to-green-800 text-white py-12 px-4">
+    <footer className="bg-gradient-to-br from-[#99cc33] to-[#ffcc66] text-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -43,20 +43,27 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col items-center md:items-end">
-            <img
-              src="/images/fssai-logo.png"
-              alt="FSSAI Logo"
-              className="h-20 w-auto mb-2"
-            />
+            <div className="flex gap-4 mb-2">
+              <img
+                src="/images/makeinindia.png"
+                alt="Make in India Logo"
+                className="h-20 w-auto"
+              />
+              <img
+                src="/images/fssai-logo.png"
+                alt="FSSAI Logo"
+                className="h-20 w-auto"
+              />
+            </div>
             <p className="font-poppins text-sm text-white/80 text-center md:text-right">
-              FSSAI No: 12345678901234
+              FSSAI License No: 12345678901234
             </p>
           </div>
         </div>
 
         <div className="border-t border-white/20 pt-8 text-center">
           <p className="font-poppins text-sm text-white/60">
-            © 2025 Gupta Ji Ki Mojito — All Rights of Chill Reserved.
+           © 2025 Gupta Ji Ki Mojito - Refreshing India, one chill at a time.
           </p>
         </div>
       </div>
