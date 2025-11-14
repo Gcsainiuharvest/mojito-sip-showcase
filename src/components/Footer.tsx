@@ -1,8 +1,8 @@
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Instagram,} from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#99cc33] text-white py-12 px-4">
+    <footer className="bg-primary text-primary-foreground py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -30,7 +30,7 @@ const Footer = () => {
               {/* <a href="#" className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <Facebook className="w-5 h-5" />
               </a> */}
-              <a href="#" className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a href="https://www.instagram.com/guptajikimojito/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <Instagram className="w-5 h-5" />
               </a>
               {/* <a href="#" className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-all duration-300 hover:scale-110">
@@ -43,16 +43,16 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col items-center md:items-end">
-            <div className="flex gap-4 mb-2">
+            <div className="flex gap-4 mb-2 items-center">
               <img
                 src="/images/makeinindia.png"
                 alt="Make in India Logo"
-                className="h-16 w-auto"
+                className="h-12 w-auto"
               />
               <img
                 src="/images/fssai-logo.png"
                 alt="FSSAI Logo"
-                className="h-20 w-auto"
+                className="h-16 w-auto"
               />
             </div>
             <p className="font-poppins text-sm text-white/80 text-center md:text-right">

@@ -7,12 +7,7 @@ const CTASection = () => {
       <style>
         {`
           #contact {
-            background-image: url(/images/footerbanner_mobile.png);
-          }
-          @media (min-width: 768px) {
-            #contact {
-              background-image: url(/images/footerbanner.png);
-            }
+            background-image: url(/images/Footer.jpg);
           }
         `}
       </style>

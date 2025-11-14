@@ -116,10 +116,9 @@ const ProductSection = () => {
             <div className={`transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}>
-               <h2 className="font-playfair text-4xl md:text-5xl font-black  leading-none mb-4">
-              {product.name}
+            <h2 className="font-playfair text-4xl md:text-5xl font-black italic leading-none mb-4">
+               {product.name}
             </h2>
-             
               <div className={`h-1.5 w-24 bg-gradient-to-r ${product.gradient} rounded-full transition-all duration-700 ${
                 isVisible ? 'w-24' : 'w-0'
               }`} style={{ transitionDelay: '0.3s' }} />
@@ -128,25 +127,27 @@ const ProductSection = () => {
             <div className={`transition-all duration-1000 delay-100 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}>
+              <p className="font-poppins text-muted-foreground mb-6 leading-7 text-2xl">
+               <b>{product.tagline}</b>            </p>
               <p className="text-2xl md:text-2xl font-semibold text-foreground/90 italic">
-                {product.tagline}
+                
               </p>
             </div>
 
             <div className={`transition-all duration-1000 delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}>
-              <p className="text-lg md:text-xl leading-relaxed text-foreground/80 font-poppins font-serif italic">
+                  <div className="space-y-3 text-muted-foreground/90 font-poppins">
                 {product.description}
-              </p>
+              </div>
+              
             </div>
              <div className={`transition-all duration-1000 delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}>
-              <p className="text-lg md:text-xl leading-relaxed text-foreground/80 font-poppins font-serif italic">
-                <b>Shelf Life: 4 Months of Pure, Minty Goodness
-<br/>It’s more than a drink - it’s an instant café experience, ready to pour and share.</b>
-              </p>
+              <p style={{fontSize:18}}><b>Shelf Life: 4 Months of Pure, Minty Goodness
+<br/>It’s more than a drink - it’s an instant café experience, ready to pour and share.</b></p>
+              
             </div>
 
           </div>

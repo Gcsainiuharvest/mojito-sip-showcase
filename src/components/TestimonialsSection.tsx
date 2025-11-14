@@ -5,25 +5,25 @@ import { Quote } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Gopi chand" ,
-    role: "Food Blogger",
-      initials: "AK",
+      name: "Millet Muse" ,
+    role: "Business",
+      initials: "MM",
       quote:
-        "Mojito Sip is my go-to for a quick refresh. Perfect balance of tang and mint!",
+        "Love the name. Need more brands with core Indian-ness reflecting in them.",
     },
     {
-      name: "Rohit Sharma",
-      role: "Fitness Enthusiast",
-      initials: "RS",
+      name: "Anonymous",
+      role: "Student",
+      initials: "AN",
       quote:
-        "Low on sugar, high on taste. It’s the summer drink I keep coming back to.",
+        "It is better than Lahori Jeera and has an after taste as well.",
     },
     {
-      name: "Ailesh",
-      role: "Designer",
-      initials: "SA",
+      name: "Tamanna Grover",
+      role: "Artist",
+      initials: "TG",
       quote:
-        "The flavors are spot on. Nimboo is my absolute favorite – so refreshing!",
+        "Gupta ji will takeover the market like crazy, I am sure! 🔥",
     },
   ];
 
@@ -32,7 +32,7 @@ const TestimonialsSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-playfair font-bold">
-            Suna Hai? Sab Chill Kar Rahe Hain.
+           Let's Keep the Chill Flowing
           </h2>
           <p className="mt-3 text-muted-foreground font-poppins">
             Why Everyone’s Vibing with Gupta Ji Ki Mojito
