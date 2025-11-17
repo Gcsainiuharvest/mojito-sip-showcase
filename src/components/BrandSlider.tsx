@@ -47,7 +47,7 @@ const BrandSlider = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full min-h-screen overflow-hidden border-b flex items-center" id="about">
+    <section ref={sectionRef} className="relative w-full min-h-[70vh] md:min-h-screen overflow-hidden border-b flex items-center" id="about">
       <div className={`group relative mx-auto max-w-7xl px-4 py-16 md:py-20 w-full ${s.bg}`}>
         <div className="grid md:grid-cols-12 gap-6 items-center">
           {/* Copy */}
