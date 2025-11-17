@@ -94,9 +94,8 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="mb-8 text-lg md:text-xl text-primary-foreground/90 font-poppins font-light max-w-2xl mx-auto">
+          <p className="mb-8 text-sm md:text-base text-primary-foreground/90 font-poppins font-light max-w-2xl mx-auto">
            The taste you loved at cafés - now bottled, chilled, and ready to sip anytime
-            {/* <span className="block mt-2 font-medium"> Meet the Flavours.</span> */}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
