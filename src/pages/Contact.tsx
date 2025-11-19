@@ -123,7 +123,7 @@ const Contact = () => {
                 Call Us
               </h3>
               <p className="font-poppins text-muted-foreground mb-2">
-                +91 (XXX) XXX-XXXX
+                +91 88266 63762
               </p>
               <p className="font-poppins text-sm text-muted-foreground">
                 Available Monday - Friday, 9AM to 6PM IST
@@ -139,7 +139,7 @@ const Contact = () => {
                 Email Us
               </h3>
               <p className="font-poppins text-muted-foreground mb-2">
-                guptajikimojito@gmail.com
+                guptaji@uharvest.in
               </p>
               <p className="font-poppins text-sm text-muted-foreground">
                 We'll respond within 24 hours
@@ -155,7 +155,7 @@ const Contact = () => {
                 Visit Us
               </h3>
               <p className="font-poppins text-muted-foreground mb-2">
-                Gupta Ji Ki Mojito Head Office
+               Delhi,
               </p>
               <p className="font-poppins text-sm text-muted-foreground">
                 India
