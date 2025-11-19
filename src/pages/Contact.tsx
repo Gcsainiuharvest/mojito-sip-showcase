@@ -40,12 +40,12 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsLoading(true);
 
-    try {
-      const dataToSend = {
+  try {
+    const payload = {
       name: formData.name,
       full_address: formData.fullAddress,
       city: formData.city,
@@ -56,43 +56,49 @@ const Contact = () => {
       current_bussiness: formData.currentBusiness,
     };
 
-      const sheetUrl="https://script.google.com/macros/s/AKfycbzLDy_TXDUbTYombPapcegVQjznkJCESTP56zwIz4qMmvD9yG0DnTKn4UY6N_Iq9Ceq/exec";
+    const sheetUrl = "https://script.google.com/macros/s/AKfycbycLTNrdXIog_o5V3mujH9boEZPVFIR6JkmtAI0oLdDJ9re8vlVjBH_aooaNym3SUrW/exec";
 
-     const response = await fetch(sheetUrl, {
-      method: "POST",
-      body: JSON.stringify(dataToSend),
-      headers: { "Content-Type": "application/json" },
+    const response = await fetch(sheetUrl, {
+      redirect: "follow",
+      method: 'POST',
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
+      body: JSON.stringify(payload),
     });
 
-      if (response.ok) {
-        toast({
-          title: "Success!",
-          description: "Your message has been sent successfully. We'll get back to you soon!",
-        });
-        setFormData({
-          name: "",
-          fullAddress: "",
-          city: "",
-          state: "",
-          pincode: "",
-          contactNumber: "",
-          interestedIn: "",
-          currentBusiness: "",
-        });
-      } else {
-        throw new Error("Failed to submit form");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
+    const result = await response.json();
+
+    if (result.success) {
       toast({
-        title: "Error",
-        description: "Failed to submit the form. Please try again.",
-        variant: "destructive",
+        title: "Success!",
+        description: "Your message has been sent successfully!",
       });
-    } finally {
-      setIsLoading(false);
+
+      setFormData({
+        name: "",
+        fullAddress: "",
+        city: "",
+        state: "",
+        pincode: "",
+        contactNumber: "",
+        interestedIn: "",
+        currentBusiness: "",
+      });
+    } else {
+      throw new Error(result.error || "Submission failed");
     }
-  };
+  } catch (error) {
+    toast({
+      title: "Error",
+      description: "Failed to submit the form. Please try again.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsLoading(false);
+  }
+};
+
 
   return (
     <main className="min-h-screen font-poppins">
