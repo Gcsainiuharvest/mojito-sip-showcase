@@ -14,8 +14,10 @@ import {
 import { Leaf, Sparkles } from "lucide-react";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -23,6 +25,10 @@ const HeroSection = () => {
     email: "",
     message: "",
   });
+
+  const handleClick = ()=>{
+    navigate("/contact");
+  }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -97,17 +103,19 @@ const HeroSection = () => {
           <p className="mb-8 text-sm md:text-base text-primary-foreground/90 font-poppins font-light max-w-2xl mx-auto">
            The taste you loved at cafés - now bottled, chilled, and ready to sip anytime
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-              <DialogTrigger asChild>
-                <Button
+           <Button
                   size="lg"
+                  onClick={handleClick}
                   className="group bg-primary hover:bg-primary-glow text-primary-foreground font-poppins font-semibold px-8 py-6 text-lg shadow-glow transition-all duration-300 hover:scale-105"
                 >
                   <Sparkles className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
                   Order Now
                 </Button>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+              <DialogTrigger asChild>
+               
               </DialogTrigger>
               <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>

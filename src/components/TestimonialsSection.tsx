@@ -12,11 +12,11 @@ const TestimonialsSection = () => {
         "Love the name. Need more brands with core Indian-ness reflecting in them.",
     },
     {
-      name: "Anonymous",
-      role: "Student",
+      name: "Royal Frozens",
+      role: "Distributor",
       initials: "AN",
       quote:
-        "It is better than Lahori Jeera and has an after taste as well.",
+        "The product is very good and tastes amazing.",
     },
     {
       name: "Tamanna Grover",

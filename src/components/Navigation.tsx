@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,11 +17,24 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isHomePage = location.pathname === "/";
+
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
+    setIsMobileMenuOpen(false);
+    
+    if (!isHomePage) {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -26,13 +42,15 @@ const Navigation = () => {
     { label: "Home", id: "hero" },
     { label: "About", id: "about" },
     { label: "News & Events", id: "news-events" },
-    { label: "Contact", id: "contact" },
   ];
+
+  const shouldShowBackground = isScrolled || !isHomePage;
+  const textColor = shouldShowBackground ? "text-foreground" : "text-white";
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        shouldShowBackground
           ? "bg-background/95 backdrop-blur-md shadow-soft"
           : "bg-transparent"
       }`}
@@ -40,13 +58,13 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("hero")}>
+          <Link to="/" className="flex items-center gap-3">
             <img
               src="/images/logo.png"
               alt="Mojito Logo"
-              className="h-10 w-auto object-contain drop-shadow-sm"
+              className="h-10 w-auto object-contain drop-shadow-sm hover:drop-shadow-md transition-all"
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -54,22 +72,21 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`${isScrolled ? "text-foreground" : "text-white"} hover:text-primary font-poppins font-medium transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
+                className={`${textColor} hover:text-primary font-poppins font-medium transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full`}
               >
                 {item.label}
               </button>
             ))}
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-primary hover:bg-primary-glow text-primary-foreground font-poppins font-semibold shadow-glow"
-            >
-              Enquire Now
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-primary hover:bg-primary-glow text-primary-foreground font-poppins font-semibold shadow-glow">
+                Enquire Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden ${isScrolled ? "text-foreground" : "text-white"}`}
+            className={`md:hidden ${textColor}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -83,18 +100,17 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-4 py-3 ${isScrolled ? "text-foreground" : "text-white"} hover:text-primary hover:bg-muted font-poppins font-medium transition-colors duration-300`}
+                className={`block w-full text-left px-4 py-3 text-foreground hover:text-primary hover:bg-muted font-poppins font-medium transition-colors duration-300`}
               >
                 {item.label}
               </button>
             ))}
             <div className="px-4 pt-3">
-              <Button
-                onClick={() => scrollToSection("contact")}
-                className="w-full bg-primary hover:bg-primary-glow text-primary-foreground font-poppins font-semibold"
-              >
-                Enquire Now
-              </Button>
+              <Link to="/contact" className="block">
+                <Button className="w-full bg-primary hover:bg-primary-glow text-primary-foreground font-poppins font-semibold">
+                  Enquire Now
+                </Button>
+              </Link>
             </div>
           </div>
         )}

@@ -22,13 +22,13 @@ const CTASection = () => {
       <div className="relative z-10 pl-6 md:pl-20 text-white max-w-xl space-y-6">
         <h2 className="text-4xl md:text-4xl font-playfair font-bold leading-tight">
          
-          <span className="text-[#99cc33]">Let’s Keep the Chill Flowing.
+          <span className="text-[#99cc33]">Let’s Keep the Chill Flowing
 
 </span>
         </h2>
 
         <p className="text-lg font-poppins text-gray-100 leading-relaxed">
-         For partnerships, collaborations, or distribution —
+         For partnerships, collaborations, or distribution
 
           <span className="italic"> connect with the team behind your favourite ₹10 refresher.</span><br />
         </p>

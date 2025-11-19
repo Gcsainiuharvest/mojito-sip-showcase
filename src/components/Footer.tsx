@@ -1,4 +1,5 @@
-import { Instagram,} from "lucide-react";
+import { Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -11,6 +12,7 @@ const Footer = () => {
               alt="Gupta Ji Ki Mojito Logo"
               className="h-20 w-auto mb-4"
             />
+             
             <p className="font-poppins text-sm text-white/80">
                India’s Taste of Chill. Gupta ji ki Mojito
             </p>
@@ -21,7 +23,7 @@ const Footer = () => {
             <ul className="space-y-2 font-poppins text-sm">
               <li><a href="#about" className="hover:text-lime-300 transition-colors">About</a></li>
               <li><a href="#" className="hover:text-lime-300 transition-colors">Shop</a></li>
-              <li><a href="#contact" className="hover:text-lime-300 transition-colors">Contact</a></li>
+              <li><Link to="/contact" className="hover:text-lime-300 transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
@@ -55,8 +57,13 @@ const Footer = () => {
                 className="h-16 w-auto"
               />
             </div>
+         
+             <p className="font-poppins text-sm text-white/80 text-center md:text-right">
+              Manufactured by Organicut fresh private limited
+            </p>
             <p className="font-poppins text-sm text-white/80 text-center md:text-right">
-              FSSAI License No: 12345678901234
+            An FSSSC-2000 Company<br/>
+              FSSAI License No: 13319002000638
             </p>
           </div>
         </div>
