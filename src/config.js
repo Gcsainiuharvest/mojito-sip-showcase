@@ -1,0 +1,2 @@
+export const deployId="AKfycbzLDy_TXDUbTYombPapcegVQjznkJCESTP56zwIz4qMmvD9yG0DnTKn4UY6N_Iq9Ceq";
+export const sheetUrl="https://script.google.com/macros/s/AKfycbzLDy_TXDUbTYombPapcegVQjznkJCESTP56zwIz4qMmvD9yG0DnTKn4UY6N_Iq9Ceq/exec";

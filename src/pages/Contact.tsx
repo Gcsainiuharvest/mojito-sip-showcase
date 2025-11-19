@@ -45,23 +45,24 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      const formDataToSend = new FormData();
-      formDataToSend.append("name", formData.name);
-      formDataToSend.append("fullAddress", formData.fullAddress);
-      formDataToSend.append("city", formData.city);
-      formDataToSend.append("state", formData.state);
-      formDataToSend.append("pincode", formData.pincode);
-      formDataToSend.append("contactNumber", formData.contactNumber);
-      formDataToSend.append("interestedIn", formData.interestedIn);
-      formDataToSend.append("currentBusiness", formData.currentBusiness);
+      const dataToSend = {
+      name: formData.name,
+      full_address: formData.fullAddress,
+      city: formData.city,
+      state: formData.state,
+      pincode: formData.pincode,
+      phone: formData.contactNumber,
+      interested_in: formData.interestedIn,
+      current_bussiness: formData.currentBusiness,
+    };
 
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbx12345/exec",
-        {
-          method: "POST",
-          body: formDataToSend,
-        }
-      );
+      const sheetUrl="https://script.google.com/macros/s/AKfycbzLDy_TXDUbTYombPapcegVQjznkJCESTP56zwIz4qMmvD9yG0DnTKn4UY6N_Iq9Ceq/exec";
+
+     const response = await fetch(sheetUrl, {
+      method: "POST",
+      body: JSON.stringify(dataToSend),
+      headers: { "Content-Type": "application/json" },
+    });
 
       if (response.ok) {
         toast({
