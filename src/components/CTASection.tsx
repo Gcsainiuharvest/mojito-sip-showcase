@@ -43,7 +43,7 @@ const CTASection = () => {
           </li>
           <li className="flex items-center gap-3">
             <MapPin className="w-5 h-5 text-[#99cc33]" />
-            <span>Delhi, India</span>
+            <span>D-4, Panchwati Colony, Adarsh Nagar, Delhi-110033</span>
           </li>
           <li className="flex items-center gap-3">
             <MessageCircle className="w-5 h-5 text-[#99cc33]" />
