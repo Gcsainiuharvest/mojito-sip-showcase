@@ -110,7 +110,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           <h1 className="text-5xl md:text-7xl font-playfair font-black text-foreground mb-6">
             Contact Us
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text text-muted-foreground max-w-2xl mx-auto">
             Have a question or want to collaborate? We'd love to hear from you!
           </p>
         </div>
@@ -132,7 +132,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 +91 88266 63762
               </p>
               <p className="font-poppins text-sm text-muted-foreground">
-                Available Monday - Friday, 9AM to 6PM IST
+                Available Monday - Saturday, 9AM to 6PM IST
               </p>
             </div>
 
@@ -161,10 +161,10 @@ const handleSubmit = async (e: React.FormEvent) => {
                 Visit Us
               </h3>
               <p className="font-poppins text-muted-foreground mb-2">
-               Delhi,
+              A 12, Panchwati Colony, Adarsh Nagar,
               </p>
               <p className="font-poppins text-sm text-muted-foreground">
-                India
+                 Delhi - 110033
               </p>
             </div>
           </div>

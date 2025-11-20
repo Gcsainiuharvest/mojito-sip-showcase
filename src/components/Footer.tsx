@@ -59,7 +59,8 @@ const Footer = () => {
             </div>
          
              <p className="font-poppins text-sm text-white/80 text-center md:text-right">
-              Manufactured by Organicut fresh private limited
+              Manufactured by
+              <br/> Organicut Fresh Pvt. Ltd.
             </p>
             <p className="font-poppins text-sm text-white/80 text-center md:text-right">
             An FSSSC-2000 Company<br/>

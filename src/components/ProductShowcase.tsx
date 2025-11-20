@@ -50,7 +50,7 @@ const ProductSection = () => {
   const product = {
     name: "The OG Drink - Mint Mojito at ₹10",
     tagline: "Café-Style Mojito, Now for Every Home & Counter!",
-    description: "Fresh, fizzy, and timeless - our Mint Mojito is the original mood-lifter that everyone crave Whether you’re serving guests at your café, restocking your store, or sipping at home, one thing stays constant, the café-style freshness, sealed and ready at just ₹10. Blended with crisp mint, tangy lemon, and that signature café sparkle, it’s the drink that turns any moment into a chill moment.",
+    description: "Fresh, fizzy, and timeless - our Mint Mojito is the original mood-lifter that everyone crave whether you’re serving guests at your café, restocking your store, or sipping at home, one thing stays constant, the café-style freshness, sealed and ready at just ₹10. Blended with crisp mint, tangy lemon, and that signature café sparkle, it’s the drink that turns any moment into a chill moment.",
     image: mintBottle,
     gradient: "from-[#99cc33] via-[#aadd44] to-[#88bb22]",
   };
