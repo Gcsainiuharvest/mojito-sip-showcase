@@ -161,7 +161,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 Visit Us
               </h3>
               <p className="font-poppins text-muted-foreground mb-2">
-              A 12, Panchwati Colony, Adarsh Nagar,
+              D-4, Panchwati Colony, Adarsh Nagar,
               </p>
               <p className="font-poppins text-sm text-muted-foreground">
                  Delhi - 110033
