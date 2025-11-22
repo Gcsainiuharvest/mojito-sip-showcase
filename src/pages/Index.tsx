@@ -34,7 +34,8 @@ const Index = () => {
       <TestimonialsSection />
       <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
       <iframe
-        src="//lightwidget.com/widgets/90ca9f1b81e45b9bbee2e66031f894de.html"
+        src="https://cdn.lightwidget.com/widgets/90ca9f1b81e45b9bbee2e66031f894de.html"
+        scrolling="no"
         allowTransparency={true}
         className="lightwidget-widget"
         style={{ width: "100%", border: 0, overflow: "hidden", height: "250px" }}
